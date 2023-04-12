@@ -166,10 +166,10 @@ public class Calculator implements ActionListener{
         if(e.getSource()==clrButton){
            textfield.setText("");
         }
-        if(e.getSource()==delButton){
+        if(e.getSource()==delButton) {
             String string = textfield.getText();
             textfield.setText("");
-            for(int i  =0; i<string.length()-1;i++){
+            for (int i = 0; i < string.length() - 1; i++) {
                 textfield.setText(textfield.getText() + string.charAt(i));
             }
 
