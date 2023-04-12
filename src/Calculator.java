@@ -75,7 +75,7 @@ public class Calculator implements ActionListener{
         panel.add(numberButtons[1]);
         panel.add(numberButtons[2]);
         panel.add(numberButtons[3]);
-        panel.add(addButton);;
+        panel.add(addButton);
         panel.add(numberButtons[4]);
         panel.add(numberButtons[5]);
         panel.add(numberButtons[6]);
@@ -174,10 +174,13 @@ public class Calculator implements ActionListener{
             }
 
         }
-        if(e.getSource()==negButton) {
-            double temp = Double.parseDouble(textfield.getText());
-            temp*=-1;
-            textfield.setText(String.valueOf(temp));
+        if(e.getSource()==negButton){
+            try {
+                double temp = Double.parseDouble(textfield.getText());
+                temp *= -1;
+                textfield.setText(String.valueOf(temp));
+            } catch (NumberFormatException ex) {}
         }
+
     }
 }
