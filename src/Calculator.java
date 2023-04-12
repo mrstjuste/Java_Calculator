@@ -175,11 +175,10 @@ public class Calculator implements ActionListener{
 
         }
         if(e.getSource()==negButton){
-            try {
                 double temp = Double.parseDouble(textfield.getText());
                 temp *= -1;
                 textfield.setText(String.valueOf(temp));
-            } catch (NumberFormatException ex) {}
+
         }
 
     }
